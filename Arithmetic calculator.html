@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Arithmetic calculator</title>
+    <style>
+        
+        h1{
+            text-align: center;
+            text-decoration: underline;
+        
+        }
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+body{
+   min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    background-color:blue;
+    background:url("data:image/jpeg;base64,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")no-repeat;
+        width:100%;
+       background-position:center;
+        background-size: cover;
+}
+div{
+    text-align: center;
+}
+div h2{
+    letter-spacing:1px;
+    text-transform: capitalize;
+    color:white;
+    text-transform:uppercase;
+    word-spacing:10px ;
+
+}
+div hr{
+    margin:10px 0;
+}
+div input[type=number]{
+    margin:8px 0;
+    padding:8px;
+    width:70%;
+    font-size: 15px;
+    text-transform:capitalize ;
+    border:3px groove blue;
+    border-radius: 5px;
+
+}
+div button{
+margin:5px 5px;
+padding:6px 0;
+width:40px;
+border:3px groove blue;
+font-size: 15px;
+border-radius: 5px;
+}
+
+        
+        
+    </style>
+    </head>
+    <body>
+        
+        <div id="Arithmetic">
+            <h2>Arithmetic calculator</h2><hr />
+        <input  type="number" id="num1" placeholder="Enter Number" required>
+        <input  type ="number" id="num2" placeholder="Enter Number" required><br />
+        <button id="add" type="button" >+</button>
+        <button  id="sub" type="button" >-</button>
+        <button  id="mul" type="button" >x</button>
+        <button id="div"  type="button" >/</button>
+        <button  id="rem" type="button" >%</button>
+        <input type="number"  placeholder="print number" id="result" onclick="calculate()" readonly/>
+        </div>
+    <script>
+        
+            
+           var n1=document.getElementById("num1");
+ var n2=document.getElementById("num2");
+ var res=document.getElementById("result");
+
+ document.getElementById("add").addEventListener("click",function(){
+    res.value=parseInt(n1.value)+parseInt(n2.value);
+
+                  });
+ document.getElementById("sub").addEventListener("click",function(){
+    res.value=parseInt(n1.value)-parseInt(n2.value);
+
+ });
+ document.getElementById("mul").addEventListener("click",function(){
+    res.value=parseInt(n1.value)*parseInt(n2.value);
+
+ });
+ document.getElementById("div").addEventListener("click",function(){
+    res.value=parseInt(n1.value)/parseInt(n2.value);
+
+ });
+ document.getElementById("rem").addEventListener("click",function(){
+    res.value=parseInt(n1.value)%parseInt(n2.value);
+
+ });
+
+
+ //function sum(){
+//     var num1=parseInt(document.getElementById("num1").value);
+//  var num2=parseInt(document.getElementById("num2").value);
+//      var sum=num1+num2;
+//      alert(sum);
+
+
+ 
+//  function sub(){
+//     var num1=parseInt(document.getElementById("num1").value);
+//  var num2=parseInt(document.getElementById("num2").value);
+//      var sub=num1-num2;
+//      alert(sub);
+
+//  }
+//  function mul(){
+//     var num1=parseInt(document.getElementById("num1").value);
+//  var num2=parseInt(document.getElementById("num2").value);
+//      var mul=num1*num2;
+//      alert(mul);
+
+//  }
+//  function div(){
+//     var num1=parseInt(document.getElementById("num1").value);
+//  var num2=parseInt(document.getElementById("num2").value);
+//      var div=num1/num2;
+//      alert(div);
+
+//  }
+//  function rem(){
+//     var num1=parseInt(document.getElementById("num1").value);
+//  var num2=parseInt(document.getElementById("num2").value);
+//      var rem=num1%num2;
+//      alert(rem);
+
+//  }
+        </script>
+
+    </body>
+</html>
